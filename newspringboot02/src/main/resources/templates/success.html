@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>成功</h1>
+<div th:id="div01" th:text="${msg}">这是显示欢迎信息</div>
+<!--/*   th：任意html属性；来替换原生属性的值*/-->
+<div id="div02" th:id="div03" th:text="${msg}">这是显示欢迎信息</div>
+<!--<hr>-->
+<div th:text="${msg02}"></div><!--/*转义*/-->
+<div th:utext="${msg02}"></div><!--/*不转义*/-->
+<hr/>
+<h3 th:text="${user}" th:each="user:${users}"></h3>
+<hr/>
+<h3><span th:each="user:${users}">[[${user}]]</span></h3>
+<!--/* 转义    [( )]不转义*/-->
+
+</body>
+</html>

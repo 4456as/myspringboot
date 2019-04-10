@@ -1,0 +1,54 @@
+server:
+  port: 8081
+  #    在网页地址访问时需要加入此工程名。
+  servlet:
+    context-path: /newspringboot02
+  tomcat:
+    uri-encoding: utf-8
+spring:
+#指定国际化文件位置信息
+  messages:
+    basename: i18n.index
+    #指定springmvc页面缓存是否随时保存
+  thymeleaf:
+    cache: false
+    #更改springmvc处理的默认日期格式
+  mvc:
+    date-format: yyyy-MM-dd
+---
+#可以强行改变静态文件夹的路径
+#spring:
+#  resources:
+#    static-locations: [classpath:/jsp/,casspath:/css/]
+---
+#spring:
+##改变默认的配置文件位置=，配置外部配置文件
+#  config:
+#    location: G:/application.properties
+---
+#spring:
+#  profiles:
+#    active: dev
+---
+#person:
+#    lastName: 张三
+#    age: 18
+#    boss: false
+#    birth: 2017/12/12
+#    maps: {k1: v1,k2: 12}
+#
+#    lists: [lisi,zhaoliu]
+#
+#    dog:
+#      name: 小狗
+#      age: 12
+---
+#server:
+#  port:8082
+#spring:
+#  profiles: dev
+---
+#server:
+#  port:8083
+#spring:
+#  profiles: prod
